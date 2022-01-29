@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport content="width="device-width, initial-scale=1.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account-Crop Buddy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="Images/logo1.jpeg" width="138px">
+                </div>
+                <nav>
+                    <ul id="Menuitems">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="">ABOUT</a></li>
+                        <li><a href="Products.html">PRODUCTS</a></li>
+                        <li><a href="">CONTACT</a></li>
+                        <li><a href="Account.html">ACCOUNT</a></li>
+                    </ul>
+                </nav>
+                <a href="Cart.html"><img src="Images/Cart-removebg-preview.png" width="40px" height="30px"></a>
+                <img src="Images/menu-icon-removebg-preview.png" width="30px" height="30px" alt="" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+        <!-------account-page-------->
+        <div class="account-page">
+         <div class="container">
+             <div class="row">
+                 <div class="col-2">
+                     <img src="Images/image3-removebg-preview.png" alt="" width="100%">
+                 </div>
+                 <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="Indicator">
+                        </div>
+                        <form id="loginForm" >
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Login</button>
+                            
+                        </form>
+                        <form id="RegForm">
+                            <input type="text" placeholder="Username">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Register</button>
+                            <a href="">Forgot password</a>
+                        </form>
+                    </div>
+                </div>
+             </div>
+         </div>
+
+        </div>
+ 
+       
+    <!-----------Footer--------->
+ <div class="footer">
+        <div class="small-container5">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios moblie phone.</p>
+                    <div class="app-logo">
+                        <img src="Images/Google Play and App store.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                   <img src="Images/logo1.jpeg" alt="">
+                    <p>Our Purpose Is To Sustainanly Make the Pleasure and Benefits of Agricultural Products Accessible to the Many.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Our Offerings</h3>
+                    <ul>
+                        <li>Seeds</li>
+                        <li>Fertilizers</li>
+                        <li>Pesticides</li>
+                        <li>Machinery</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2021-Group 46</p>
+        </div>
+ </div>
+   <!--------js for toggle menu----------->
+<script>
+       var Menuitems = document.getElementById("Menuitems");
+       Menuitems.style.maxHeight="0px";
+
+       function menutoggle(){
+           if(Menuitems.style.maxHeight == "0px")
+           {
+               Menuitems.style.maxHeight ="200px";
+           }
+           else
+           {
+               Menuitems.style.maxHeight="0px";
+           }
+       }
+ </script> 
+     
+<!-------js for toggle form------>
+ <script>
+var loginForm=document.getElementById("loginForm");
+var RegForm=document.getElementById("RegForm");
+var Indicator=document.getElementById("Indicator");
+ function register(){
+     loginForm.style.display="none";
+     RegForm.style.display="block";
+     Indicator.style.transform="translateX(100px)";
+ }
+ function login(){
+    RegForm.style.display="none";
+    loginForm.style.display="block";
+     Indicator.style.transform="translateX(0px)";
+ }
+
+ </script>
+   
+</body>
+</html>
